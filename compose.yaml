@@ -1,0 +1,11 @@
+name: paynext
+services:
+  frontend:
+    container_name: paynext-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8081:80"
+    environment:
+      - NODE_ENV=production
